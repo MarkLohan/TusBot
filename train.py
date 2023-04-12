@@ -19,7 +19,7 @@ tokenizer.fit_on_texts(texts)
 vocab_size = len(tokenizer.word_index) + 1
 
 # Save tokenizer
-with open('tokenizer.pickle', 'wb') as handle:
+with open('tokens/tokenizer.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 # Convert text to sequences
@@ -45,4 +45,4 @@ model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=
 model.fit(question_sequences, answer_sequences, epochs=1000)
 
 # Save the model
-model.save('model6.h5')
+model.save('models/model.h5')

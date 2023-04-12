@@ -4,11 +4,11 @@ import tensorflow as tf
 import pickle
 
 # Load the tokenizer
-with open('tokenizer.pickle', 'rb') as handle:
+with open('tokens/tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 # Load the model
-model = tf.keras.models.load_model('model6.h5')
+model = tf.keras.models.load_model('models/model.h5')
 model.summary()
 
 # Get max_length from the model
